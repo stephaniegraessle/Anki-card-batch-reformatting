@@ -4,14 +4,7 @@ import re
 # Export shared deck from Anki app as .txt file
 INPUT_CSV = 'All in One Kanji.csv'
 MAX_ROWS_PER_FILE = 2500
-# when importing to Anki, add 'TAKOBOTO' as a tag for all cards
-
-# TODO:
-# extract vocab words with each kanji (column F or 5)
-# extract JLPT level (column U or 20)
-# sort into files separated by JLPT level
-# give tags based on JLPT level
-# give 漢字 tag to all words
+# (Optional) When importing to Anki, add '漢字' as a tag for all cards
 
 with open(INPUT_CSV, 'r', newline='') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=';')
